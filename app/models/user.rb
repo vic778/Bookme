@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-has_person_name
+  has_person_name
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -8,5 +8,5 @@ has_person_name
 
   has_many :booking_types
 
-  validates :booking_link, presence: true 
+  validates :booking_link, presence: true
 end
