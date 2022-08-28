@@ -37,6 +37,7 @@ gem "cssbundling-rails"
 gem "name_of_person"
 gem "sidekiq", "~> 6.5", ">= 6.5.4"
 gem "stripe"
+gem "better_errors"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
