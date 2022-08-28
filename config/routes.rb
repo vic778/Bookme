@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
   get 'users/show'
-    authenticate :user, lambda { |u| u.admin? } do
-      mount Sidekiq::Web => '/sidekiq'
-    end
-
+  authenticate :user, ->(u) { u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   devise_for :users
 
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
   resources :booking_types
   resources :bookings
 
-  get ":booking_link", to: "users#show", as: :user 
+  get ':booking_link', to: 'users#show', as: :user
   root to: 'home#index'
- 
 end
