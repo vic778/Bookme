@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
- 
-  def index
-  end
+  def index; end
 
   def dashboard
     @booking_types = current_user.booking_types
