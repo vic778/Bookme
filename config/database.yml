@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: bookme_production
-  username: bookme
-  password: <%= ENV["BOOKME_DATABASE_PASSWORD"] %>
+  # username: bookme
+  # password: <%= ENV["BOOKME_DATABASE_PASSWORD"] %>
