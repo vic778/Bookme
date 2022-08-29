@@ -7,8 +7,7 @@ class BookingTypesController < ApplicationController
   end
 
   # GET /booking_types/1 or /booking_types/1.json
-  def show
-  end
+  def show; end
 
   # GET /booking_types/new
   def new
@@ -16,8 +15,7 @@ class BookingTypesController < ApplicationController
   end
 
   # GET /booking_types/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /booking_types or /booking_types.json
   def create
@@ -54,13 +52,14 @@ class BookingTypesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_booking_type
-      @booking_type = BookingType.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def booking_type_params
-      params.require(:booking_type).permit(:name, :location, :description, :color, :duration, :payemnt_required, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_booking_type
+    @booking_type = BookingType.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def booking_type_params
+    params.require(:booking_type).permit(:name, :location, :description, :color, :duration, :payemnt_required, :price)
+  end
 end

@@ -1,9 +1,9 @@
 module BookingTypesHelper
-    def duration(type)
-        if type.duration == 60
-            return "1 hr"
-        else
-            type.duration.to_s + " mins"
-        end
+  def duration(type)
+    if type.duration == 60
+      "1 hr"
+    else
+      "#{type.duration} mins"
     end
+  end
 end
