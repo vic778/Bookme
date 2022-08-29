@@ -56,7 +56,7 @@ class BookingsController < ApplicationController
     amount = @booking_type.price * 100
 
     payment_intent = Stripe::PaymentIntent.create(
-      amount: amount,
+      amount:,
       currency: 'usd',
       automatic_payment_methods: {
         enabled: true
