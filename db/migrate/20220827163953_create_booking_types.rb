@@ -7,7 +7,7 @@ class CreateBookingTypes < ActiveRecord::Migration[7.0]
       t.string :location
       t.string :color, default: '#000000'
       t.integer :duration
-      t.boolean :payemnt_required
+      t.boolean :payment_required
       t.integer :price
       t.references :user, null: false, foreign_key: true
 
